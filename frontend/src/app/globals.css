@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #fbf4e8;
+  --sand: #f3e6d0;
+  --maroon: #6b1f2a;
+  --terracotta: #c2573a;
+  --gold: #e3a72f;
+  --leaf: #3f5b3a;
+  --ink: #2b1b17;
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-sand: var(--sand);
+  --color-maroon: var(--maroon);
+  --color-terracotta: var(--terracotta);
+  --color-gold: var(--gold);
+  --color-leaf: var(--leaf);
+  --color-ink: var(--ink);
+  --font-sans: var(--font-poppins), system-ui, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+/* Subtle kolam-style dot lattice used as a decorative backdrop */
+.kolam-bg {
+  background-image: radial-gradient(
+    circle,
+    rgb(227 167 47 / 0.35) 1.5px,
+    transparent 1.6px
+  );
+  background-size: 28px 28px;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin: 0.75rem auto 0;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--terracotta));
+}
